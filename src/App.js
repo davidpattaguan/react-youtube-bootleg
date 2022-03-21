@@ -9,6 +9,10 @@ import VideoDetail from "./components/video-detail/VideoDetail";
 class App extends React.Component {
   state = { videos: [], selectedVideo: null };
 
+  componentDidMount() {
+    this.onSubmitHandler("titan");
+  }
+
   onSubmitHandler = async (term) => {
     const response = await youtube.get("/search", {
       params: {
@@ -16,6 +20,7 @@ class App extends React.Component {
       },
     });
     this.setState({ videos: response.data.items });
+    this.setState({ selectedVideo: response.data.items[0] });
   };
 
   onVideoSelect = (video) => {

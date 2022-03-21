@@ -10,17 +10,17 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <div className="search-bar h10 bg-gray-800 p-5 flex">
+      <div className="search-bar h10 bg-gray-900 p-5 flex">
         <div>
-          <h1 className="font-bold text-2xl text-white">Utube</h1>
+          <h1 className="font-bold text-2xl text-white">Yootube</h1>
         </div>
         <form
           className="form flex items-center"
           onSubmit={this.onSubmitHandler}
         >
-          <div className="form-group w-64">
+          <div className="form-group md:w-[58rem]">
             <input
-              className="rounded ml-5 p-2 w-full"
+              className="rounded md:ml-16 ml-5 p-2 w-full bg-slate-800"
               type="text"
               placeholder="Search Videos"
               onChange={(e) => this.setState({ term: e.target.value })}

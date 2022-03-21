@@ -2,7 +2,7 @@ import React from "react";
 
 const VideoDetail = ({ video }) => {
   if (!video) {
-    return <div>Loading...</div>;
+    return <div className="text-xl font-semibold text-white">Loading...</div>;
   }
 
   console.log(video);
@@ -13,7 +13,7 @@ const VideoDetail = ({ video }) => {
     <div className>
       <div className="h-5/6">
         <iframe
-          className="md:w-full w-[28rem] md:h-[28rem] h-[12rem]"
+          className="md:w-full w-[28rem] md:h-[38rem] h-[12rem]"
           src={videoSrc}
         ></iframe>
       </div>
